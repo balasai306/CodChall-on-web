@@ -1,0 +1,117 @@
+#target {
+  background-color: orangered;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.animate {
+  /* animation: anim-1 duration timing-function delay iteration-count direction fill-mode; */
+  animation-name: anim-1;
+  animation-duration: 10s;
+  /* animation-play-state: running; */
+  animation-iteration-count: 1;
+}
+@keyframes anim-1 {
+  0% {
+    background-color: orangered;
+    height: 50px;
+    width: 50px;
+
+    transform: translate(0, 0);
+  }
+  25% {
+    border: 10px, solid, black;
+    background-color: red;
+    height: 25px;
+    width: 75px;
+    border-radius: 50%;
+
+    transform: translate(500px, 0);
+  }
+  50% {
+    border: 10px, solid, black;
+    background-color: blue;
+    height: 150px;
+    width: 150px;
+    border-radius: 40%;
+    transform: translate(500px, 500px);
+  }
+  75% {
+    border: 10px, solid, black;
+    background-color: black;
+    height: 15px;
+    width: 50px;
+    border-radius: 25%;
+    transform: translate(1000px, 500px);
+  }
+  100% {
+    border: 10px, solid, black;
+    background-color: yellow;
+    height: 10px;
+    width: 100px;
+    border-radius: 0%;
+    transform: translate(1000px, 0px);
+  }
+
+  /* from{ background-color: orangered;height: 50px;width: 50px;border-radius: 50%;position: (0px,0px);}
+    to{background-color: aquamarine;height: 10px;width: 40px;position: (500px,0px);} */
+}
+
+#anim-two {
+  background-color: aquamarine;
+  height: 100px;
+  width: 200px;
+  border: 10px solid transparent;
+  border-image: url(https://demo.tutorialzine.com/2013/10/css3-features-you-can-finally-use/assets/img/border.png)
+    30 30 round;
+}
+
+.animate2 {
+  animation-name: anim-2;
+  animation-duration: 10s;
+  /* animation-play-state: running; */
+  animation-iteration-count: 3;
+}
+@keyframes anim-2 {
+  /* from{ 
+       
+        background-image: linear-gradient(,red, yellow, green);
+     }
+     to{
+        background-image: radial-gradient(red, yellow, green);
+    } */
+  0% {
+    background-image: linear-gradient(120deg, red, yellow, green);
+  }
+
+  50% {
+    height: 300px;
+    width: 300px;
+    background-image: radial-gradient(black, crimson, blue);
+    border-radius: 50%;
+    transform: translate(400px, 0px);
+  }
+  100% {
+    background-image: linear-gradient(red, yellow, green);
+  }
+}
+#font {
+  background: 
+    url("https://demo.tutorialzine.com/2013/10/css3-features-you-can-finally-use/assets/img/space.jpg")
+       bottom center;
+
+  width: 400px;
+  height: 200px;
+  margin: 0 auto;
+  color: white;
+
+  border-radius: 3px;
+
+  /* Animate the positions of both of the backgrounds */
+  transition: background-position 1s;
+}
+#font:hover {
+  background-position: 35% 10px, top left;
+  color: grey;
+}

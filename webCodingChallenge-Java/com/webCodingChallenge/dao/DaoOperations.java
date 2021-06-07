@@ -8,7 +8,7 @@ import com.webCodingChallenge.model.User;
 public interface DaoOperations {
 	boolean loginCheckDao(String userName, String password) throws DaoException;
 
-	List<String> Fetch(String userName) throws DaoException;
+	List<User> Fetch(String userName) throws DaoException;
 
 
 

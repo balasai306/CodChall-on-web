@@ -17,9 +17,10 @@
 
 <title>View Users</title>
 </head>
-<body>
+<body >
+
 	<main class="container">
-		<div class="bg-light p-5 rounded">
+		<div class="bg-light p-5 rounded" >
 			<h1>Details of the  user</h1>
 			
 			<div class="container-fluid">
@@ -43,5 +44,9 @@
 		
 		</div>
 	</main>
+	
+	
+	
+	
 </body>
 </html>

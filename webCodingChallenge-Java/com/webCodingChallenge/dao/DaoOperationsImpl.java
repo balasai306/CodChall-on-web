@@ -78,9 +78,9 @@ public class DaoOperationsImpl implements DaoOperations {
 	}
 
 	@Override
-	public List<String> Fetch(String userName) throws DaoException {
+	public List<User> Fetch(String userName) throws DaoException {
 		// TODO Auto-generated method stub
-		String sql = "select name,mobileNum,city,state,country,email from user_details where email=?";
+		String sql = "select id,name,mobileNum,city,state,country,email from user_details";
 		Closing close = new Closing();
 
 		Connector connection = new Connector();
@@ -90,7 +90,7 @@ public class DaoOperationsImpl implements DaoOperations {
 		PreparedStatement stmt = null;
 		int count = 0;
 //		User user = new User();
-		List<String> userDetails  = new ArrayList<String>();
+		List<User> userDetails  = new ArrayList<User>();
 		try {
 			System.out.println("making connection");
 
@@ -98,7 +98,7 @@ public class DaoOperationsImpl implements DaoOperations {
 
 			stmt = con.prepareStatement(sql);
 
-			stmt.setString(1, userName);
+			
 
 			rs = stmt.executeQuery();
 
@@ -106,27 +106,29 @@ public class DaoOperationsImpl implements DaoOperations {
 			System.out.println(rs);
 
 			while (rs.next()) {
-//				User user= new User();
-				String name = rs.getString(1);
-				String mobileNum = rs.getString(2);
-				String city = rs.getString(3);
-				String state = rs.getString(4);
-				String country = rs.getString(5);
-				String email = rs.getString(6);
-				userDetails.add(name);
-				userDetails.add(mobileNum);
-				userDetails.add(city);
-				userDetails.add(state);
-				userDetails.add(country);
-				userDetails.add(email);
+				User user= new User();
+//				String name = rs.getString(1);
+//				String mobileNum = rs.getString(2);
+//				String city = rs.getString(3);
+//				String state = rs.getString(4);
+//				String country = rs.getString(5);
+//				String email = rs.getString(6);
+//				userDetails.add(name);
+//				userDetails.add(mobileNum);
+//				userDetails.add(city);
+//				userDetails.add(state);
+//				userDetails.add(country);
+//				userDetails.add(email);
 				
-//				user.setName(rs.getString(1));
-//				user.setMobileNum((rs.getString(2)));
-//				user.setCity((rs.getString(3)));
-//				user.setState((rs.getString(4)));
-//				user.setCountry((rs.getString(5)));
-//				user.setEmail((rs.getString(6)));
-//				System.out.println(user);
+				user.setId(rs.getInt(1));
+				user.setName(rs.getString(2));
+				user.setMobileNum((rs.getString(3)));
+				user.setCity((rs.getString(4)));
+				user.setState((rs.getString(5)));
+				user.setCountry((rs.getString(6)));
+				user.setEmail((rs.getString(7)));
+				System.out.println(user);
+				userDetails.add(user);
 			}
 
 		} catch (SQLException e) {

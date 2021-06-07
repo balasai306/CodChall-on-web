@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="ISO-8859-1">
+  <title>Insert title here</title>
+  <link rel="stylesheet" href="animations.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet"></head>
+
+<body>
+
+
+  <div id="target">
+
+
+  </div>
+  <button id="anim-1" class="Animation" name="Anim-1" onclick="anim1()">Anim-1</button>
+  <br><br>
+  <div id="anim-two">
+
+
+  </div>
+  <br><br>
+  <button id="anim-2" class="Animation" name="Anim-2" onclick="anim2()">Anim-2</button>
+<div id="font">
+  <h2 style="font-family: 'Dancing Script', cursive; font-size: 30px;"> font-1 </h2>
+  <br>
+  <h2 style="font-family: 'Shadows Into Light', cursive; font-size: 50px;"> font-2 </h2>
+</div>
+
+ 
+  
+  
+  <script>
+    function anim1() {
+      var animation = document.getElementById("target");
+      animation.className = "animate";
+
+
+    }
+
+    function anim2(){
+    	var anim2= document.getElementById("anim-two");
+      anim2.className="animate2";
+    }
+  </script>
+
+
+</body>
+
+</html>

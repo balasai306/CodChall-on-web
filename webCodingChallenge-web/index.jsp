@@ -4,7 +4,8 @@
 
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Login</title>
+<link rel="stylesheet" href="style.css">
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
 	rel="stylesheet"
@@ -17,36 +18,44 @@
 
 </head>
 
-<body>
-	<script scr="jquery.js"></script>
+<body style="background-color: orange">
+	<script src="jquery.js"></script>
 
-	<div
-		style="text-align: center; border: 5px solid black; pading 10px; margin: 5% 25% 5% 25%">
+	<div id="form-div"
+		style="text-align: center; border: 5px solid black; pading 10px; ">
+				<br>
+		
 		<h2>SIGN UP FOR REWARDS</h2>
-		<form action="login" method="get">
+		<hr style="height:3px ;color: black">
+		
+		<form action="login" method="get" name="loginform">
 			<input type="text" name="userName" id="uname"
 				placeholder="Email Address" required="required"> <br> <br>
 			<input type="password" name="password" id="password"
 				placeholder="password" required="required"> <br> <br>
 			<!-- <input type="button" onclick="login(); show()" value="submit"> -->
-			<button type="button" onclick="login(); show()">submit</button>
+			<button type="button" onclick="login(); show()">SignUp</button>
 			<!-- <input type="button" value="details"
                             id="details"    onclick="window.location.href='details1.jsp'; return false;" />
 	 -->
 			<button type="submit" id="submit" style="visibility: hidden;">
 				View Deatails</button>
 		</form>
-
+		<br>
+		<br>
 
 	</div>
+
+
+
+
+
 	<script type="text/javascript">
-	function show() {
-		var showButton = document.getElementById("submit");
-		showButton.style.visibility = "visible";
-	}</script>
-
-
-
+		function show() {
+			var showButton = document.getElementById("submit");
+			showButton.style.visibility = "visible";
+		}
+	</script>
 	<script src="login.js">
 		
 	</script>
